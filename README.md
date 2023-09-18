@@ -9,12 +9,16 @@ En este avance, hemos implementado una versión básica del algoritmo de ordenam
 ## Instrucciones para compilar el avance de proyecto
 Ejecuta el siguiente comando en la terminal:
 
-`g++ main.cpp -o primer_avance` 
+```bash
+g++ main.cpp -o primer_avance
+```
 
 ## Instrucciones para ejecutar el avance de proyecto
 Ejecuta el siguiente comando en la terminal:
 
-`./primer_avance` 
+```bash
+./primer_avance
+```
 
 ## Descripción de las entradas del avance de proyecto
 Para este avance, no se requieren entradas de archivos externos. Los datos de prueba se generan dentro del programa.
