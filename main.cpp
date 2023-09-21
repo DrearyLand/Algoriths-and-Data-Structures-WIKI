@@ -1,45 +1,49 @@
 #include <iostream>
 #include <vector>
+#include "Sorter.h"
 
 using namespace std;
 
-// Function to display a vector
-void mostrarVector(const vector<int>& arr) {
-    for (int num : arr) {
-        cout << num << " ";
-    }
-    cout << endl;
-}
-
-// Function for the bubble sort algorithm
-void ordenamientoBurbuja(vector<int>& arr) {
-    int n = arr.size();
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                // Swap elements without using the swap function
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-
-                // Show the sorting process at each step
-                mostrarVector(arr);
-            }
-        }
-    }
-}
-
+/**
+ * @brief Main function.
+ * @return int
+ */
 int main() {
-    vector<int> datos = {12, 4, 5, 6, 7, 3, 1, 15, 8, 10};
+    // Initialize data
+    vector<int> data = {12, 4, 5, 6, 7, 3, 1, 15, 8, 10};
+    Sorter sort;
+    int n = data.size();
 
+    // Display original data
     cout << "Original data: ";
-    mostrarVector(datos);
+    sort.mostrarVector(data);
 
-    cout << "Starting the bubble sort algorithm..." << endl;
-    ordenamientoBurbuja(datos);
+    // Perform bubble sort
+    cout << "\n\nStarting the bubble sort algorithm..." << endl;
+    sort.bubbleSort(data,n);
+    cout << "Swaps done: " << sort.getSwaps() << endl;
+    cout << "Comparisons done: " << sort.getComparisons() << endl;
+    sort.mostrarVector(data);
 
-    cout << "Sorted Data: ";
-    mostrarVector(datos);
+    // Reset data
+    data = {12, 4, 5, 6, 7, 3, 1, 15, 8, 10};
+
+    // Perform selection sort
+    cout << "\nStarting the selection sort algorithm..." << endl;
+    sort.selectionSort(data,n);
+    cout << "Swaps done: " << sort.getSwaps() << endl;
+    cout << "Comparisons done: " << sort.getComparisons() << endl;
+    sort.mostrarVector(data);
+
+    // Reset data
+    data = {12, 4, 5, 6, 7, 3, 1, 15, 8, 10};
+
+    // Perform insertion sort
+    cout << "\nStarting the insertion sort algorithm..." << endl;
+    sort.insertionSort(data,n);
+    cout << "Swaps done: " << sort.getSwaps() << endl;
+    cout << "Comparisons done: " << sort.getComparisons() << endl;
+    sort.mostrarVector(data);
 
     return 0;
 }
