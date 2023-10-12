@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <windows.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -43,6 +45,7 @@ public:
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                     swaps++;
+                    displayBars(arr);
                 }
             }
         }
@@ -70,6 +73,7 @@ public:
                 arr[i] = arr[minIdx];
                 arr[minIdx] = temp;
                 swaps++;
+                displayBars(arr);
             }
         }
     }
@@ -90,6 +94,7 @@ public:
                 arr[j + 1] = arr[j];
                 j--;
                 swaps++;
+                displayBars(arr);
             }
             arr[j + 1] = key;
         }
@@ -155,6 +160,7 @@ public:
                 arr[k] = rightArr[j];
                 j++;
                 swaps++;
+                displayBars(arr);
             }
             k++;
         }
@@ -197,6 +203,7 @@ public:
                     comparisons++;
                     arr[j] = arr[j - gap];
                     swaps++;
+                    displayBars(arr);
                 }
                 // Put arr[i] (the original a[i]) in its correct location
                 arr[j] = temp;
@@ -219,6 +226,23 @@ public:
      */
     int getSwaps() const {
         return swaps;
+    }
+
+    /**
+     * @brief Display elements of the vector as ASCII bars.
+     * @param arr The vector to be displayed.
+     */
+    void displayBars(const vector<int>& arr) {
+        system("cls");
+        cout << "\n";
+        for (int num : arr) {
+            for (int i = 0; i < num; ++i) {
+                cout << "|"; // ASCII bar representation
+            }
+            cout << endl;
+        }
+        cout << endl;
+        usleep(300000);
     }
 };
 
