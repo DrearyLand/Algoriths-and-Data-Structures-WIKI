@@ -123,6 +123,8 @@ public:
             // Merge the sorted sub-vectors
             merge(arr, left, middle, right);
         }
+        
+        displayBars(arr);
     }
 
     /**
@@ -160,11 +162,9 @@ public:
                 arr[k] = rightArr[j];
                 j++;
                 swaps++;
-                displayBars(arr);
             }
             k++;
         }
-
         // Copy the remaining elements of leftArr[], if there are any
         while (i < n1) {
             arr[k] = leftArr[i];
