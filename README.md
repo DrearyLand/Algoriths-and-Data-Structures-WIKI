@@ -1,64 +1,59 @@
 # Sorting Algorithms Visualizer
 
-This project consists of a C++ program that implements three sorting algorithms (bubble, selection, and insertion) and displays the number of comparisons and swaps made during the execution of each algorithm. The main goal is to improve knowledge in data structures and algorithms.
+This project consists of a C++ program that implements different sorting algorithms and data structures. The program currently displays different sorting algorithms and a data structure in the console, you can observe the behavior of each one. The main objective is to improve knowledge in data structures and algorithms as you see the behavior of each one.
 
 ## Project Progress
 
-In this initial stage of the project, we have implemented three sorting algorithms: bubble, selection, and insertion. Each of these algorithms is located in the `Sorter` class and can be used to sort an integer vector.
+The project is currently equipped with a variety of menus, providing access to an extensive range of sorting algorithms and the data structure of a Stack. The project operates with a multitude of classes, each tailored to cater to the specific needs of the user. This flexible design allows users to access and interact with different components seamlessly.
 
 ## Instructions to compile the project progress
 Run the following command in the terminal:
 
-`g++ main.cpp -o primer_avance` 
+`g++ main.cpp` 
 
 ## Instructions to execute the project progress
 Run the following command in the terminal:
 
-`./primer_avance` 
+1. For linux:
+`./a.out` 
+
+2. For Windows:
+`a.exe`
 
 ## Description of the Inputs of the Project Progress
 
-In this project progress, the inputs are the data sets that you want to sort. These data sets are integer vectors that are defined in the source code of the program. You can modify these vectors according to your needs to test the sorting algorithms with different data sets.
+1. **Main Menu:**
+   - Format: Integer (e.g., 1, 2, 3).
+   - Example: User selects 2 for sorting algorithms.
+
+2. **Algorithm Selection:**
+   - Format: Integer (e.g., 1, 2, 3).
+   - Example: User selects 3 for Merge Sort.
+
+3. **Stack Operations:**
+   - Format (Add Element): Integer.
+   - Example: User adds the number 42 to the stack.
+
+4. **Invalid Inputs:**
+   - Format: Any invalid input (e.g., letters or out-of-range numbers).
+   - Example: User enters "abc," an error message is displayed.
 
 ## Description of the Outputs of the Project Progress
 
-The outputs of this project progress include:
+1. **Sorting Algorithm Visualization:**
+   - Displays intermediate sorting steps using ASCII bars.
 
-1. The original data before applying any sorting algorithm.
-2. The number of comparisons made during the execution of each algorithm.
-3. The number of swaps (exchanges) made during the execution of each algorithm.
-4. The sorted data after applying each sorting algorithm.
+2. **Stack Operations:**
+   - Presents the current state of the stack after operations.
 
-## Competency Development
+3. **Error Messages:**
+   - Reports invalid inputs or errors with descriptive messages.
 
-In this project progress, we are meeting the following sub-competency indicators:
+4. **Return to Main Menu:**
+   - Allows seamless navigation back to the main menu for further interactions.
 
-### SICT0301: Evaluates Components
+5. **Algorithm Statistics:**
+   - Provides information on comparisons and swaps made during sorting.
 
-We have correctly implemented sorting algorithms (bubble, selection, insertion) in the `Sorter` class. In addition, we have included functionality to display the number of comparisons and swaps made during the execution of each algorithm.
-
-### SICT0302: Makes Decisions
-
-We have selected suitable sorting algorithms to solve the problem of sorting an integer vector. Each algorithm is used correctly and effectively produces sorted results.
-
-## Program Execution
-
-Below is an example of running the program with a sample data set:
-
-```plaintext
-Original data: 12 4 5 6 7 3 1 15 8 10
-
-Starting the bubble sort algorithm...
-Swaps done: 19
-Comparisons done: 45
-Data after sorting: 1 3 4 5 6 7 8 10 12 15
-
-Starting the selection sort algorithm...
-Swaps done: 9
-Comparisons done: 45
-Data after sorting: 1 3 4 5 6 7 8 10 12 15
-
-Starting the insertion sort algorithm...
-Swaps done: 19
-Comparisons done: 19
-Data after sorting: 1 3 4 5 6 7 8 10 12 15
+6. **Farewell Message:**
+   - Concludes the program with a friendly goodbye message to the user.

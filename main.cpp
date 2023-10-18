@@ -1,7 +1,7 @@
+#include "Menu.h"
+#include "Sorter.h"
 #include <iostream>
 #include <vector>
-#include "Sorter.h"
-#include "Menu.h"
 
 using namespace std;
 
@@ -10,35 +10,35 @@ using namespace std;
  * @return int
  */
 int main() {
-    int choice;
+  int choice;
 
-    Menu menu;
-    
-    system("cls");
-    menu.displayMenu();
+  Menu menu;
 
-    while (true) {
-        cin >> choice;
-        if (choice == 5) {
-            break;
-        }
+  system("clear");
+  menu.displayMenu();
 
-        if (choice >= 1 && choice <= 4) {
-            menu.runOption(choice);
-            cout << "\n\nReturning to main menu...\n\n\n";
-            sleep(3);
-            system("cls");
-        } else{
-            system("cls");
-            cout << "\nInvalid choice. Please try again.\n";
-            sleep(1);
-            system("cls");
-            cin.clear();
-            cin.ignore();
-        }
-
-        menu.displayMenu();
+  while (true) {
+    cin >> choice;
+    if (choice == 5) {
+      break;
     }
-    
-    return 0;
+
+    if (choice >= 1 && choice <= 4) {
+      menu.runOption(choice);
+      cout << "\n\nReturning to main menu...\n\n\n";
+      sleep(3);
+      system("clear");
+    } else {
+      system("clear");
+      cout << "\nInvalid choice. Please try again.\n";
+      sleep(1);
+      system("clear");
+      cin.clear();
+      cin.ignore();
+    }
+
+    menu.displayMenu();
+  }
+
+  return 0;
 }
