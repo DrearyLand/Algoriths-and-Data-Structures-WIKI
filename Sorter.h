@@ -13,8 +13,8 @@ using namespace std;
  */
 class Sorter {
 private:
-  int comparisons; ///< Number of comparisons made during sorting.
-  int swaps;       ///< Number of swaps made during sorting.
+  int comparisons = 0; ///< Number of comparisons made during sorting.
+  int swaps = 0;       ///< Number of swaps made during sorting.
 
 public:
   /**
@@ -237,7 +237,7 @@ public:
       cout << endl;
     }
     cout << endl;
-    usleep(300000);
+    usleep(100000);
   }
 };
 

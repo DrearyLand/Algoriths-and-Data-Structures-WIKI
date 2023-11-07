@@ -40,26 +40,22 @@ public:
     switch (choice) {
     case 1:
       system("clear");
-      cout << "\nStarting Searching Algorithms menu..." << endl;
-      usleep(1000000);
+      cout << "\nWelcome to the Searching Algorithms menu" << endl;
       searchingAlgorithms();
       break;
     case 2:
       system("clear");
-      cout << "\nStarting Sorting Algorithms menu..." << endl << endl;
-      usleep(1000000);
+      cout << "\nWelcome to the Sorting Algorithms menu" << endl << endl;
       sortingAlgorithms();
       break;
     case 3:
       system("clear");
-      cout << "\nStarting Linear Data Structures menu..." << endl;
-      usleep(1000000);
+      cout << "\nWelcome to the Data Structures menu" << endl;
       linearData();
       break;
     case 4:
       system("clear");
-      cout << "\nStarting Non-Linear Data Structures menu..." << endl;
-      usleep(1000000);
+      cout << "\nWelcome to the Non-Linear Data Structures menu" << endl;
       noLinearData();
       break;
     case 5:
@@ -168,18 +164,17 @@ public:
     cin >> secondChoice;
 
     Stack stacks;
+    Queue queue;
 
     switch (secondChoice) {
     case 1:
       system("clear");
       cout << "\nStarting Stacks..." << endl;
-      usleep(1000000);
       stacks.stackMenu();
-      usleep(3000000);
       break;
     case 2:
       cout << "\nIn progress..." << endl;
-      usleep(1000000);
+      queue.menuQueue();
       break;
     case 3:
       cout << "\nIn progress..." << endl;
@@ -200,7 +195,7 @@ public:
       cout << "\nInvalid choice.\n";
       cin.clear();
       cin.ignore();
-      sortingAlgorithms();
+      linearData();
     }
   }
 
