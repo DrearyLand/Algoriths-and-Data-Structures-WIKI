@@ -1,8 +1,10 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include "LinearData.h"
 #include "Sorter.h"
+#include "LinearData/Stack.h"
+#include "LinearData/Queue.h"
+#include "LinearData/L_List.h"
 #include <iostream>
 #include <unistd.h>
 
@@ -45,7 +47,6 @@ public:
       break;
     case 2:
       system("clear");
-      cout << "\nWelcome to the Sorting Algorithms menu" << endl << endl;
       sortingAlgorithms();
       break;
     case 3:
@@ -86,6 +87,7 @@ public:
     Sorter sorter;
     int n = data.size();
 
+    cout << "\nWelcome to the Sorting Algorithms menu\n\n";
     cout << "Which Sorting Algorithm would you like to watch?\n";
     cout << "1. Bubble Sort" << endl;
     cout << "2. Selection Sort" << endl;
@@ -165,6 +167,7 @@ public:
 
     Stack stacks;
     Queue queue;
+    L_List list;
 
     switch (secondChoice) {
     case 1:
@@ -178,7 +181,7 @@ public:
       break;
     case 3:
       cout << "\nIn progress..." << endl;
-      usleep(1000000);
+      list.listMenu();
       break;
     case 4:
       cout << "\nIn progress..." << endl;

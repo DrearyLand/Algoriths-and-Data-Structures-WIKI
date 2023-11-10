@@ -25,8 +25,8 @@ int main() {
 
     if (choice >= 1 && choice <= 4) {
       menu.runOption(choice);
-      cout << "\n\nReturning to main menu...\n\n\n";
-      sleep(1);
+      // cout << "\n\nReturning to main menu...\n\n\n";
+      // sleep(1);
       system("clear");
     } else {
       system("clear");

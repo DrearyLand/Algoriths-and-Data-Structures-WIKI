@@ -237,7 +237,7 @@ public:
       cout << endl;
     }
     cout << endl;
-    usleep(100000);
+    usleep(125000);
   }
 };
 
