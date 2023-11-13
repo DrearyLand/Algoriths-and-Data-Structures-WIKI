@@ -3,14 +3,22 @@
 
 using namespace std;
 
+/**
+ * @class Queue
+ * @brief A class representing a queue data structure.
+ */
 class Queue {
 private:
-  Node *front = NULL;
-  Node *end = NULL;
-  Node *current;
-  int queueChoice, data, len;
+  Node *front = NULL; ///< Pointer to the front of the queue.
+  Node *end = NULL;   ///< Pointer to the end of the queue.
+  Node *current;      ///< Pointer to traverse the queue.
+  int queueChoice, data, len; ///< Variables for user input and data manipulation.
+
 public:
 
+  /**
+   * @brief Displays the menu for queue operations and handles user input.
+   */
   void menuQueue(){
     system("clear");
     cout << "\nWelcome to Queues\n\n";
@@ -36,7 +44,9 @@ public:
         insertQueue(data);
         len--;
       }
-      usleep(2000000);
+      cout << "\nPress enter to continue.";
+      cin.ignore();
+      cin.get();
       menuQueue();
       break;
 
@@ -47,7 +57,9 @@ public:
         insertQueue(randomNum());
         len--;
       }
-      usleep(2000000);
+      cout << "\nPress enter to continue.";
+      cin.ignore();
+      cin.get();
       menuQueue();
       break;
 
@@ -65,7 +77,9 @@ public:
         cout << "[NULL]";
       }
       cout << " <- End" << endl;
-      usleep(2000000);
+      cout << "\nPress enter to continue.";
+      cin.ignore();
+      cin.get();
       menuQueue();
       break;
 
@@ -76,12 +90,14 @@ public:
       } else {
         cout << "The Queue is empty." << endl;
       }
-      usleep(2000000);
+      cout << "\nPress enter to continue.";
+      cin.ignore();
+      cin.get();
       menuQueue();
       break;
 
     case 5:
-      cout << "Removing the elements of the stack: " << endl;
+      cout << "Removing the elements of the queue: " << endl;
       while (front != NULL) {
         deleteQueue(data);
         if (front != NULL) {
@@ -91,7 +107,9 @@ public:
         }
       }
       cout << endl;
-      usleep(2000000);
+      cout << "\nPress enter to continue.";
+      cin.ignore();
+      cin.get();
       menuQueue();
       break;
 
@@ -108,6 +126,10 @@ public:
     }
   }
 
+  /**
+   * @brief Inserts an element into the queue.
+   * @param n The element to be inserted.
+   */
   void insertQueue(int n){
     Node *new_node = new Node();
     new_node->data = n;
@@ -124,6 +146,10 @@ public:
     cout << "\nElement " << n << " added to the queue\n\n";
   }
 
+  /**
+   * @brief Removes an element from the front of the queue.
+   * @param n Reference to store the removed element.
+   */
   void deleteQueue(int &n){
     n = front->data;
     if (front == end){
@@ -134,6 +160,11 @@ public:
     }
   }
 
+  /**
+   * @brief Checks if the queue is empty.
+   * @param front Pointer to the front of the queue.
+   * @return True if the queue is empty, false otherwise.
+   */
   bool empty_queue(Node *front){
     return (front == NULL) ? true : false;
   }

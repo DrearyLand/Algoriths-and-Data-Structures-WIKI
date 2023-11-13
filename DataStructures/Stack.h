@@ -43,7 +43,9 @@ public:
         addNode(data);
         len--;
       }
-      usleep(2000000);
+      cout << "\nPress enter to continue.";
+      cin.ignore();
+      cin.get();
       stackMenu();
       break;
 
@@ -54,7 +56,9 @@ public:
         addNode(randomNum());
         len--;
       }
-      usleep(2000000);
+      cout << "\nPress enter to continue.";
+      cin.ignore();
+      cin.get();
       stackMenu();
       break;
 
@@ -70,7 +74,9 @@ public:
         }
         cout << endl;
       }
-      usleep(2000000);
+      cout << "\nPress enter to continue.";
+      cin.ignore();
+      cin.get();
       stackMenu();
       break;
 
@@ -81,7 +87,9 @@ public:
       } else {
         cout << "The stack is empty." << endl;
       }
-      usleep(2000000);
+      cout << "\nPress enter to continue.";
+      cin.ignore();
+      cin.get();
       stackMenu();
       break;
 
@@ -96,7 +104,9 @@ public:
         }
       }
       cout << endl;
-      usleep(2000000);
+      cout << "\nPress enter to continue.";
+      cin.ignore();
+      cin.get();
       stackMenu();
       break;
 

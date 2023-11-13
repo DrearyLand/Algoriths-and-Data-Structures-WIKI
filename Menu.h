@@ -2,9 +2,9 @@
 #define MENU_H
 
 #include "Sorter.h"
-#include "LinearData/Stack.h"
-#include "LinearData/Queue.h"
-#include "LinearData/L_List.h"
+#include "DataStructures/Stack.h"
+#include "DataStructures/Queue.h"
+#include "DataStructures/L_List.h"
 #include <iostream>
 #include <unistd.h>
 
@@ -34,7 +34,7 @@ public:
     cout << "Enter your choice: ";
   }
 
-  /**
+  /** 
    * @brief Run the selected sorting algorithm.
    * @param choice The user's choice.
    */
@@ -100,43 +100,58 @@ public:
     switch (secondChoice) {
     case 1:
       system("clear");
-      cout << "\nStarting Bubble Sort..." << endl;
-      usleep(1000000);
+      // cout << "\nStarting Bubble Sort..." << endl;
+      // usleep(1000000);
       sorter.bubbleSort(data, n);
       cout << "Swaps done: " << sorter.getSwaps() << endl;
       cout << "Comparisons done: " << sorter.getComparisons() << endl;
+      cout << "\nPress enter to continue.";      
+      cin.ignore();
+      cin.get();
       break;
     case 2:
       system("clear");
-      cout << "\nStarting Selection Sort..." << endl;
-      usleep(1000000);
+      // cout << "\nStarting Selection Sort..." << endl;
+      // usleep(1000000);  
       sorter.selectionSort(data, n);
       cout << "Swaps done: " << sorter.getSwaps() << endl;
       cout << "Comparisons done: " << sorter.getComparisons() << endl;
+      cout << "\nPress enter to continue.";      
+      cin.ignore();
+      cin.get();  
       break;
     case 3:
       system("clear");
-      cout << "\nStarting Insertion Sort..." << endl;
-      usleep(1000000);
+      // cout << "\nStarting Insertion Sort..." << endl;
+      // usleep(1000000);
       sorter.insertionSort(data, n);
       cout << "Swaps done: " << sorter.getSwaps() << endl;
       cout << "Comparisons done: " << sorter.getComparisons() << endl;
+      cout << "\nPress enter to continue.";      
+      cin.ignore();
+      cin.get();  
       break;
     case 4:
       system("clear");
-      cout << "\nStarting Merge Sort..." << endl;
-      usleep(1000000);
+      // cout << "\nStarting Merge Sort..." << endl;
+      // usleep(1000000);
       sorter.mergeSort(data, 0, n - 1);
       cout << "Swaps done: " << sorter.getSwaps() << endl;
       cout << "Comparisons done: " << sorter.getComparisons() << endl;
+      cout << "\nPress enter to continue.";      
+      cin.ignore();
+      cin.get();  
       break;
     case 5:
       system("clear");
-      cout << "\nStarting Shell Sort..." << endl;
-      usleep(1000000);
+      // cout << "\nStarting Shell Sort..." << endl;
+      // usleep(1000000);
       sorter.shellSort(data, n);
       cout << "Swaps done: " << sorter.getSwaps() << endl;
       cout << "Comparisons done: " << sorter.getComparisons() << endl;
+      cout << "\nPress enter to continue.";      
+      cin.ignore();
+      cin.get();  
       break;
     case 6:
       break;
@@ -157,8 +172,8 @@ public:
     system("clear");
     cout << "Which Linear Data Structure would you like to try?\n";
     cout << "1. Stacks" << endl;
-    cout << "2. Queues(in progress...)" << endl;
-    cout << "3. Linked List(in progress...)" << endl;
+    cout << "2. Queues" << endl;
+    cout << "3. Linked List" << endl;
     cout << "4. Doubly Linked List(in progress...)" << endl;
     cout << "5. To be added..." << endl;
     cout << "6. Return to main menu" << endl;
@@ -171,27 +186,21 @@ public:
 
     switch (secondChoice) {
     case 1:
-      system("clear");
-      cout << "\nStarting Stacks..." << endl;
       stacks.stackMenu();
       break;
     case 2:
-      cout << "\nIn progress..." << endl;
       queue.menuQueue();
       break;
     case 3:
-      cout << "\nIn progress..." << endl;
       list.listMenu();
       break;
     case 4:
-      cout << "\nIn progress..." << endl;
       usleep(1000000);
       break;
     case 5:
-      cout << "\nIn progress..." << endl;
       usleep(1000000);
       break;
-    case 6:
+    case 6: 
       break;
     default:
       system("clear");
