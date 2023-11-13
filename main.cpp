@@ -19,14 +19,12 @@ int main() {
 
   while (true) {
     cin >> choice;
-    if (choice == 5) {
+    if (choice == 4) {
       break;
     }
 
     if (choice >= 1 && choice <= 4) {
       menu.runOption(choice);
-      // cout << "\n\nReturning to main menu...\n\n\n";
-      // sleep(1);
       system("clear");
     } else {
       system("clear");

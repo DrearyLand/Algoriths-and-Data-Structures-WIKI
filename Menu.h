@@ -5,6 +5,7 @@
 #include "DataStructures/Stack.h"
 #include "DataStructures/Queue.h"
 #include "DataStructures/L_List.h"
+#include "DataStructures/BST.h"
 #include <iostream>
 #include <unistd.h>
 
@@ -28,21 +29,19 @@ public:
     cout << "each step. Choose a topic to explore.\n\n";
     cout << "1. Searching Algorithms\n";
     cout << "2. Sorting Algorithms\n";
-    cout << "3. Linear Data Structures\n";
-    cout << "4. Non-Linear Data Structures\n";
-    cout << "5. Quit\n";
+    cout << "3. Data Structures\n";
+    cout << "4. Quit\n";
     cout << "Enter your choice: ";
   }
 
   /** 
-   * @brief Run the selected sorting algorithm.
+   * @brief Run the selected menu.
    * @param choice The user's choice.
    */
   void runOption(int choice) {
     switch (choice) {
     case 1:
       system("clear");
-      cout << "\nWelcome to the Searching Algorithms menu" << endl;
       searchingAlgorithms();
       break;
     case 2:
@@ -51,19 +50,9 @@ public:
       break;
     case 3:
       system("clear");
-      cout << "\nWelcome to the Data Structures menu" << endl;
-      linearData();
+      dataStructures();
       break;
-    case 4:
-      system("clear");
-      cout << "\nWelcome to the Non-Linear Data Structures menu" << endl;
-      noLinearData();
-      break;
-    case 5:
-      system("clear");
-      cout << "Quitting the program. Goodbye!\n";
-      usleep(1000000);
-      break;
+      
     default:
       cout << "Invalid choice. Please try again.\n";
     }
@@ -100,8 +89,6 @@ public:
     switch (secondChoice) {
     case 1:
       system("clear");
-      // cout << "\nStarting Bubble Sort..." << endl;
-      // usleep(1000000);
       sorter.bubbleSort(data, n);
       cout << "Swaps done: " << sorter.getSwaps() << endl;
       cout << "Comparisons done: " << sorter.getComparisons() << endl;
@@ -111,8 +98,6 @@ public:
       break;
     case 2:
       system("clear");
-      // cout << "\nStarting Selection Sort..." << endl;
-      // usleep(1000000);  
       sorter.selectionSort(data, n);
       cout << "Swaps done: " << sorter.getSwaps() << endl;
       cout << "Comparisons done: " << sorter.getComparisons() << endl;
@@ -122,8 +107,6 @@ public:
       break;
     case 3:
       system("clear");
-      // cout << "\nStarting Insertion Sort..." << endl;
-      // usleep(1000000);
       sorter.insertionSort(data, n);
       cout << "Swaps done: " << sorter.getSwaps() << endl;
       cout << "Comparisons done: " << sorter.getComparisons() << endl;
@@ -133,8 +116,6 @@ public:
       break;
     case 4:
       system("clear");
-      // cout << "\nStarting Merge Sort..." << endl;
-      // usleep(1000000);
       sorter.mergeSort(data, 0, n - 1);
       cout << "Swaps done: " << sorter.getSwaps() << endl;
       cout << "Comparisons done: " << sorter.getComparisons() << endl;
@@ -144,8 +125,6 @@ public:
       break;
     case 5:
       system("clear");
-      // cout << "\nStarting Shell Sort..." << endl;
-      // usleep(1000000);
       sorter.shellSort(data, n);
       cout << "Swaps done: " << sorter.getSwaps() << endl;
       cout << "Comparisons done: " << sorter.getComparisons() << endl;
@@ -168,13 +147,13 @@ public:
   /**
    * @brief Handles linear data structures menu and user choices.
    */
-  void linearData() {
+  void dataStructures() {
     system("clear");
-    cout << "Which Linear Data Structure would you like to try?\n";
+    cout << "Which Data Structure would you like to try?\n";
     cout << "1. Stacks" << endl;
     cout << "2. Queues" << endl;
     cout << "3. Linked List" << endl;
-    cout << "4. Doubly Linked List(in progress...)" << endl;
+    cout << "4. Binary Search Tree" << endl;
     cout << "5. To be added..." << endl;
     cout << "6. Return to main menu" << endl;
     cout << "Enter your choice: ";
@@ -183,6 +162,7 @@ public:
     Stack stacks;
     Queue queue;
     L_List list;
+    BST bst;
 
     switch (secondChoice) {
     case 1:
@@ -195,7 +175,7 @@ public:
       list.listMenu();
       break;
     case 4:
-      usleep(1000000);
+      bst.BST_Menu();
       break;
     case 5:
       usleep(1000000);
@@ -207,7 +187,7 @@ public:
       cout << "\nInvalid choice.\n";
       cin.clear();
       cin.ignore();
-      linearData();
+      dataStructures();
     }
   }
 

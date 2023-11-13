@@ -1,4 +1,4 @@
-# Sorting Algorithms Visualizer
+# Algoriths and Data Structures WIKI
 
 This project consists of a C++ program that implements different sorting algorithms and data structures. The program currently displays different sorting algorithms and a data structure in the console, you can observe the behavior of each one. The main objective is to improve knowledge in data structures and algorithms as you see the behavior of each one.
 
