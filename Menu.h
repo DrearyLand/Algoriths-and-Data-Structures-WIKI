@@ -2,6 +2,7 @@
 #define MENU_H
 
 #include "Sorter.h"
+#include "DataStructures/LinearData.h"
 #include "DataStructures/Stack.h"
 #include "DataStructures/Queue.h"
 #include "DataStructures/L_List.h"
@@ -39,6 +40,7 @@ public:
    * @param choice The user's choice.
    */
   void runOption(int choice) {
+    vector<int> data;
     switch (choice) {
     case 1:
       system("clear");
@@ -50,7 +52,8 @@ public:
       break;
     case 3:
       system("clear");
-      dataStructures();
+      readDataFromFile("sample.txt", data);
+      dataStructures(data);
       break;
       
     default:
@@ -147,7 +150,7 @@ public:
   /**
    * @brief Handles linear data structures menu and user choices.
    */
-  void dataStructures() {
+  void dataStructures(vector<int> &data) {
     system("clear");
     cout << "Which Data Structure would you like to try?\n";
     cout << "1. Stacks" << endl;
@@ -166,16 +169,19 @@ public:
 
     switch (secondChoice) {
     case 1:
-      stacks.stackMenu();
+      for (int value : data) {
+        stacks.addNode(value);
+      }
+      stacks.stackMenu(data);
       break;
     case 2:
-      queue.menuQueue();
+      queue.menuQueue(data);
       break;
     case 3:
-      list.listMenu();
+      list.listMenu(data);
       break;
     case 4:
-      bst.BST_Menu();
+      bst.BST_Menu(data);
       break;
     case 5:
       usleep(1000000);
@@ -187,7 +193,7 @@ public:
       cout << "\nInvalid choice.\n";
       cin.clear();
       cin.ignore();
-      dataStructures();
+      dataStructures(data);
     }
   }
 

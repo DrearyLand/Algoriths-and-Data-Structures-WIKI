@@ -15,7 +15,7 @@ private:
 public:
     BST() : root(nullptr) {}
 
-    void BST_Menu(){
+    void BST_Menu(vector<int> &dataVec){
         system("clear");
         cout << "\nWelcome to Binary Search Tree\n\n";
         cout << "What fuction you want to try? " << endl;
@@ -42,7 +42,7 @@ public:
             cout << "\nPress enter to continue.";
             cin.ignore();
             cin.get();
-            BST_Menu();
+            BST_Menu(dataVec);
             break;
 
         case 2:
@@ -55,7 +55,7 @@ public:
             cout << "\nPress enter to continue.";
             cin.ignore();
             cin.get();
-            BST_Menu();
+            BST_Menu(dataVec);
             break;
 
         case 3:
@@ -68,7 +68,7 @@ public:
             cout << "\nPress enter to continue.";
             cin.ignore();
             cin.get();
-            BST_Menu();
+            BST_Menu(dataVec);
             break;
 
         case 4:
@@ -83,7 +83,7 @@ public:
             cout << "\nPress enter to continue.";
             cin.ignore();
             cin.get();
-            BST_Menu();
+            BST_Menu(dataVec);
             break;
 
         // case 5:
@@ -100,7 +100,7 @@ public:
         //     cout << "\nPress enter to continue.";
         //     cin.ignore();
         //     cin.get();
-        //     BST_Menu();
+        //     BST_Menu(dataVec);
         //     break;
 
         case 5:
@@ -111,7 +111,7 @@ public:
             cout << "\n==========Invalid choice.=============\n";
             cin.clear();
             cin.ignore();
-            BST_Menu();
+            BST_Menu(dataVec);
             break;
         }
     }

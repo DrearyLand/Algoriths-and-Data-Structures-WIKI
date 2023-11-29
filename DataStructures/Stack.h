@@ -14,11 +14,21 @@ private:
   int stackChoice, data, len; ///< Variables used for user input and temporary data storage.
 
 public:
+  void loadIntoVector(vector<int>& vec) const {
+    vec.clear();
+    Node* current = stack;
+    while (current) {
+      vec.push_back(current->data);
+      current = current->next;
+    }
+    modifyFile(vec);
+  }
+
   /**
    * @brief Displays the stack menu and performs stack operations based on user
    * input.
    */
-  void stackMenu() {
+  void stackMenu(vector<int> &dataVec) {
     system("clear");
     cout << "\nWelcome to Stacks\n\n";
     cout << "What fuction you want to try? " << endl;
@@ -46,7 +56,8 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
-      stackMenu();
+      loadIntoVector(dataVec);
+      stackMenu(dataVec);
       break;
 
     case 2:
@@ -59,10 +70,12 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
-      stackMenu();
+      loadIntoVector(dataVec);
+      stackMenu(dataVec);
       break;
 
     case 3:
+      system("clear");
       cout << "Current Stack: \n";
       if (stack == NULL) {
         cout << "\nNo data on the Stack. Try adding some numbers.\n\n";
@@ -77,7 +90,7 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
-      stackMenu();
+      stackMenu(dataVec);
       break;
 
     case 4:
@@ -90,7 +103,8 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
-      stackMenu();
+      loadIntoVector(dataVec);
+      stackMenu(dataVec);
       break;
 
     case 5:
@@ -107,7 +121,8 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
-      stackMenu();
+      loadIntoVector(dataVec);
+      stackMenu(dataVec);
       break;
 
     case 6:
@@ -118,7 +133,7 @@ public:
       cout << "\n==========Invalid choice.=============\n";
       cin.clear();
       cin.ignore();
-      stackMenu();
+      stackMenu(dataVec);
       break;
     }
   }

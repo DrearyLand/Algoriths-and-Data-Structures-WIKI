@@ -15,6 +15,7 @@ int main() {
   Menu menu;
 
   system("clear");
+  
   menu.displayMenu();
 
   while (true) {

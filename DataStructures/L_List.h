@@ -17,7 +17,7 @@ public:
     /**
      * @brief Displays the menu for linked list operations and handles user input.
      */
-    void listMenu(){
+    void listMenu(vector<int> &dataVec){
         system("clear");
         cout << "\nWelcome to Linked List\n\n";
         cout << "What fuction you want to try? " << endl;
@@ -48,7 +48,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
-                listMenu();
+                listMenu(dataVec);
                 break;
 
             case 2:
@@ -61,7 +61,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
-                listMenu();
+                listMenu(dataVec);
                 break;
 
             case 3:
@@ -76,7 +76,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
-                listMenu();
+                listMenu(dataVec);
                 break;
 
             case 4:
@@ -90,7 +90,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
-                listMenu();
+                listMenu(dataVec);
                 break;   
 
             case 5:
@@ -102,7 +102,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
-                listMenu();
+                listMenu(dataVec);
                 break;
 
             case 6:
@@ -116,7 +116,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
-                listMenu();
+                listMenu(dataVec);
                 break;  
                 
             case 7:
@@ -130,7 +130,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
-                listMenu();
+                listMenu(dataVec);
                 break;  
 
             case 8:
@@ -144,7 +144,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
-                listMenu();
+                listMenu(dataVec);
                 break; 
 
             case 9:
@@ -155,7 +155,7 @@ public:
                 cout << "\n==========Invalid choice.=============\n";
                 cin.clear();
                 cin.ignore();
-                listMenu();
+                listMenu(dataVec);
                 break;
         }
     }

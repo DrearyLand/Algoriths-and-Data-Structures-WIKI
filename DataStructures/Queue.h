@@ -19,7 +19,7 @@ public:
   /**
    * @brief Displays the menu for queue operations and handles user input.
    */
-  void menuQueue(){
+  void menuQueue(vector<int> &dataVec){
     system("clear");
     cout << "\nWelcome to Queues\n\n";
     cout << "What fuction you want to try? " << endl;
@@ -47,7 +47,7 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
-      menuQueue();
+      menuQueue(dataVec);
       break;
 
     case 2:
@@ -60,7 +60,7 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
-      menuQueue();
+      menuQueue(dataVec);
       break;
 
     case 3:
@@ -80,7 +80,7 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
-      menuQueue();
+      menuQueue(dataVec);
       break;
 
     case 4:
@@ -93,7 +93,7 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
-      menuQueue();
+      menuQueue(dataVec);
       break;
 
     case 5:
@@ -110,7 +110,7 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
-      menuQueue();
+      menuQueue(dataVec);
       break;
 
     case 6:
@@ -121,7 +121,7 @@ public:
       cout << "\n==========Invalid choice.=============\n";
       cin.clear();
       cin.ignore();
-      menuQueue();
+      menuQueue(dataVec);
       break;
     }
   }
