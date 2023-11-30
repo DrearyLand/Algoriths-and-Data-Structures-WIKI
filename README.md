@@ -1,6 +1,15 @@
 # Algoriths and Data Structures WIKI
 
-Este proyecto consta de un programa C++ que implementa diferentes algoritmos de clasificación y estructuras de datos. Actualmente el programa muestra diferentes algoritmos de clasificación y estructuras de datos en la consola, puedes observar el comportamiento de cada uno. El objetivo principal es mejorar el conocimiento en estructuras de datos y algoritmos a medida que se ve el comportamiento de cada uno.
+Este proyecto consta de un programa C++ que implementa diferentes algoritmos de clasificación y estructuras de datos. Actualmente el programa muestra diferentes algoritmos de clasificación y estructuras de datos en la consola, puedes observar el comportamiento de cada uno. El objetivo principal es mejorar el conocimiento en estructuras de 
+datos y algoritmos a medida que se ve el comportamiento de cada uno.
+
+## Leetcodes de TC1031
+### Videos
+https://drive.google.com/drive/folders/1GMwVMq8Dvc1pKyAej1M6T2sslrT56enU?usp=sharing
+### Submisions
+1. https://leetcode.com/problems/sort-colors/submissions/1052187893/
+2. https://leetcode.com/problems/merge-two-sorted-lists/submissions/1105142555/
+3. https://leetcode.com/problems/find-largest-value-in-each-tree-row/submissions/1099808071/
 
 ## Descripción del avance 1
 En esta etapa inicial del proyecto, se han implementado tres algoritmos de clasificación: burbuja, selección e inserción. Cada uno de estos algoritmos se encuentra en la clase `Sorter` y se puede utilizar para ordenar un vector entero.
