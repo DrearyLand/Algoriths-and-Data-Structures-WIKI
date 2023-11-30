@@ -54,6 +54,19 @@ Se añadió la primera estructura de datos no lineal al proyecto, la cual es el 
 3. Optimización de Archivos y Estructuración del Proyecto:
 Para mejorar la organización y mantenimiento del código, se realizaron optimizaciones en la estructura de archivos del proyecto. Se creó una carpeta específica para albergar las clases relacionadas con las estructuras de datos, lo cual facilita la ubicación y gestión de cada componente del sistema. Esta reestructuración contribuye a un código más modular y comprensible, lo que facilita su expansión y mantenimiento en futuras actualizaciones del proyecto.
 
+## Entrega final
+Este avance muestra una implementacion de lectura de datos sobre la seccion de Data Structures con las funciones implementadas podemos lograr que el usuario al ingresar a cualquier tipo de estructura de datos ya tenga un ejemplo default, con este ejemplo puede modificar y ver de manera mas clara las funcionalidades de cada estructura. Aunque el proyecto sigue en proceso para agregar mas features adelante y corregir algunos como BST, el cual sigue en desarrollo.
+
+### Cambios sobre el tercer avance avance
+1. Implementación de funciones de lectura y modificación de datos desde/hacia archivos:
+Se agregaron funciones clave como readDataFromFile, modifyFile, y loadIntoVector para facilitar la lectura inicial de datos desde archivos, la modificación de datos existentes, y la carga de datos en una estructura de vector. Estas funciones permiten al usuario tener ejemplos predeterminados y modificarlos según sea necesario, mejorando la experiencia y comprensión del funcionamiento de las estructuras de datos.
+
+2. Funcionalidades adicionales para mejorar la experiencia del usuario:
+Se implementaron características que brindan al usuario ejemplos predefinidos en las estructuras de datos, facilitando la comprensión y manipulación de las mismas. Esto proporciona un punto de partida claro para que los usuarios exploren las funcionalidades de cada estructura.
+
+3. Otras optimizaciones y correcciones menores:
+Se realizaron ajustes y correcciones menores para mejorar la coherencia y eficiencia del código. Estos cambios contribuyen a un código más limpio y comprensible.
+
 ## Instrucciones para compilar el avance de proyecto
 Ejecuta el siguiente comando en la terminal(linux):
 
@@ -270,7 +283,13 @@ La complejidad espacial de un BST es O(n) en el peor caso, donde n es el número
 
 32. void getMaxLevelRecursive(B_Node* root, int currentLevel): Esta función tiene la misma complejidad temporal que int getMaxLevel().
 
-33. void printTreeRecursive(B_Node* root, int level): La complejidad temporal de esta función es O(n), ya que visita cada nodo una vez para imprimirlo. En el peor caso, la complejidad es O(n). 
+33. void printTreeRecursive(B_Node* root, int level): La complejidad temporal de esta función es O(n), ya que visita cada nodo una vez para imprimirlo. En el peor caso, la complejidad es O(n).
+
+34. void readDataFromFile(const string& filename, vector<int>& data): Esta función lee datos desde un archivo y los almacena en un vector. La complejidad temporal depende del tamaño del archivo y la cantidad de datos, siendo O(N) en el peor caso, donde N es la cantidad de datos en el archivo.
+
+35. void modifyFile(vector<int>& data): Permite la modificación de datos en el archivo, reflejando cambios en la estructura de datos. La complejidad temporal depende de la operación de modificación realizada y, en el peor caso, puede ser O(N), donde N es la cantidad de datos a modificar.
+
+36. void loadIntoVector(vector<int>& vec) const: Carga datos desde la estructura de datos a un vector. La complejidad temporal es O(N), donde N es la cantidad de elementos en la estructura de datos, ya que se necesita recorrer la estructura para cargar los datos en el vector.
 
 ### SICT0302: Toma decisiones
 #### Selecciona un algoritmo de ordenamiento adecuado al problema y lo usa correctamente.
@@ -284,10 +303,10 @@ He desarrollado el criterio al elegir y aplicar correctamente una estructura de 
 Se implementaron mecanismos para consultar información de las estructuras de datos, permitiendo una comprensión clara de las operaciones realizadas. En cada estructura, se incluyeron funciones para mostrar el estado actual, imprimir los elementos y visualizar la estructura de manera adecuada. Por ejemplo, en la clase Stack, la función stackMenu opcion 3 muestra el estado actual de la pila. Estos mecanismos proporcionan al usuario la capacidad de entender fácilmente las transformaciones y resultados de las operaciones.
 
 #### Implementa mecanismos de lectura de archivos para cargar datos a las estructuras de manera correcta.
-Sigue en desarrollo...
+El proyecto incorpora funciones específicas para leer datos desde archivos de texto. Estas funciones son adaptables a diversas estructuras de datos, permitiendo la carga eficiente de información almacenada en archivos externos. Este enfoque facilita la inicialización de las estructuras con conjuntos de datos específicos, mejorando la flexibilidad y utilidad del proyecto.
 
 ### Implementa mecanismos de escritura de archivos para guardar los datos  de las estructuras de manera correcta
-Sigue en desarrollo...
+Las funciones implementadas para la escritura de datos en archivos de texto ofrecen una manera efectiva de preservar el estado actual de las estructuras de datos. Los mecanismos permiten al usuario guardar la información contenida en las estructuras de manera ordenada y legible en archivos externos. Este enfoque facilita la conservación y recuperación de los datos en sesiones futuras, promoviendo la eficiencia y practicidad del proyecto.
 
 ### Nota:
 BST sigue en proceso de desarrollo al igual que las Searching Algorithms y el uso de archivos en el programa.
