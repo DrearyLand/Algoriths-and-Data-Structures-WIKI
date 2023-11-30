@@ -14,6 +14,17 @@ private:
     int listChoice, len, data;
     char ch;
 public:
+
+    void loadIntoVector(vector<int>& vec) const {
+        vec.clear();
+        Node* actual = list;
+        while (actual) {
+        vec.push_back(actual->data);
+        actual = actual->next;
+        }
+        modifyFile(vec);
+    }
+
     /**
      * @brief Displays the menu for linked list operations and handles user input.
      */
@@ -48,6 +59,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
+                loadIntoVector(dataVec);
                 listMenu(dataVec);
                 break;
 
@@ -61,6 +73,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
+                loadIntoVector(dataVec);
                 listMenu(dataVec);
                 break;
 
@@ -90,6 +103,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
+                loadIntoVector(dataVec);
                 listMenu(dataVec);
                 break;   
 
@@ -102,6 +116,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
+                loadIntoVector(dataVec);
                 listMenu(dataVec);
                 break;
 
@@ -116,6 +131,7 @@ public:
                 cout << "\nPress enter to continue.";
                 cin.ignore();
                 cin.get();
+                loadIntoVector(dataVec);
                 listMenu(dataVec);
                 break;  
                 

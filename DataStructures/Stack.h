@@ -75,7 +75,6 @@ public:
       break;
 
     case 3:
-      system("clear");
       cout << "Current Stack: \n";
       if (stack == NULL) {
         cout << "\nNo data on the Stack. Try adding some numbers.\n\n";

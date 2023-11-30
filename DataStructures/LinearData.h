@@ -50,7 +50,29 @@ void modifyFile(vector<int> data){
   } else {
     cout << "Unable to open the file. " << endl;
   }
+}
 
+void resetData(vector<int> data){
+  // Input file stream for the source file
+  ifstream sourceFile("backUP.txt");
+
+  // Output file stream for the destination file
+  ofstream destinationFile("sample.txt");
+
+  // Check if both files are open
+  if (!sourceFile.is_open() || !destinationFile.is_open()) {
+    cerr << "Error opening files." << endl;
+  } else {
+  // Read and copy the content from the source file to the destination file
+    char ch;
+    while (sourceFile.get(ch)) {
+      destinationFile.put(ch);
+    }
+  }
+  
+  // Close the file streams
+  sourceFile.close();
+  destinationFile.close();
 }
 
 /**

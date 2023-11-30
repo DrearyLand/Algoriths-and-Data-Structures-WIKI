@@ -15,6 +15,15 @@ private:
   int queueChoice, data, len; ///< Variables for user input and data manipulation.
 
 public:
+  void loadIntoVector(vector<int>& vec) const {
+    vec.clear();
+    Node* actual = front;
+    while (actual) {
+      vec.push_back(actual->data);
+      actual = actual->next;
+    }
+    modifyFile(vec);
+  }
 
   /**
    * @brief Displays the menu for queue operations and handles user input.
@@ -26,7 +35,7 @@ public:
     cout << "1. Add data manually." << endl;
     cout << "2. Generate random data." << endl;
     cout << "3. View current Queue. " << endl;
-    cout << "4. Remove last element." << endl;
+    cout << "4. Remove first element." << endl;
     cout << "5. Remove all data." << endl;
     cout << "6. Return back" << endl;
     cout << "Select an option: ";
@@ -47,6 +56,7 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
+      loadIntoVector(dataVec);
       menuQueue(dataVec);
       break;
 
@@ -60,6 +70,7 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
+      loadIntoVector(dataVec);
       menuQueue(dataVec);
       break;
 
@@ -93,6 +104,7 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
+      loadIntoVector(dataVec);
       menuQueue(dataVec);
       break;
 
@@ -110,6 +122,7 @@ public:
       cout << "\nPress enter to continue.";
       cin.ignore();
       cin.get();
+      loadIntoVector(dataVec);
       menuQueue(dataVec);
       break;
 

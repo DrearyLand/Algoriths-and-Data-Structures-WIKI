@@ -167,6 +167,7 @@ public:
     L_List list;
     BST bst;
 
+    resetData(data);
     switch (secondChoice) {
     case 1:
       for (int value : data) {
@@ -175,12 +176,21 @@ public:
       stacks.stackMenu(data);
       break;
     case 2:
+      for (int value : data) {
+        queue.insertQueue(value);
+      }
       queue.menuQueue(data);
       break;
     case 3:
+      for (int value : data) {
+        list.addNode(value);
+      }
       list.listMenu(data);
       break;
     case 4:
+      for (int value : data) {
+        bst.addNode(value);
+      }
       bst.BST_Menu(data);
       break;
     case 5:

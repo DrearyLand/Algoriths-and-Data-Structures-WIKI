@@ -8,12 +8,22 @@ using namespace std;
 
 class BST {
 private:
- 
     int data, len, bstChoice, maxLevel;
     B_Node *current;
     B_Node *root;
+
 public:
     BST() : root(nullptr) {}
+
+    // void loadIntoVector(vector<int>& vec) const {
+    //     vec.clear();
+    //     B_Node* actual = root;
+    //     while (actual) {
+    //         vec.push_back(actual->data);
+    //         actual = actual->next;
+    //     }
+    //     modifyFile(vec);
+    // }
 
     void BST_Menu(vector<int> &dataVec){
         system("clear");
