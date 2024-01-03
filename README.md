@@ -1,7 +1,6 @@
 # Algoriths and Data Structures WIKI
 
-Este proyecto consta de un programa C++ que implementa diferentes algoritmos de clasificación y estructuras de datos. Actualmente el programa muestra diferentes algoritmos de clasificación y estructuras de datos en la consola, puedes observar el comportamiento de cada uno. El objetivo principal es mejorar el conocimiento en estructuras de 
-datos y algoritmos a medida que se ve el comportamiento de cada uno.
+This project consists of a C++ program that implements different classification algorithms and data structures. Currently the program displays different sorting algorithms and data structures in the console, you can observe the behavior of each one. The main objective is to improve knowledge in data structures and algorithms as the behavior of each one is seen.
 
 ## Final Project CS50x
 ### Videos
